@@ -6,7 +6,6 @@ export default class Move {
   getPosition(activePos, cells) {
     do {
       this.position = Math.round(Math.random() * (cells.length - 1));
-      console.log(this.position);
     } while (activePos === this.position);
     return this.position;
   }
