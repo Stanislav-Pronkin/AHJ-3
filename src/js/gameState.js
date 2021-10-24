@@ -16,11 +16,11 @@ export default class GameState {
   winGoblin() {
     this.scoreGoblin += 1;
     if (this.scoreGoblin < 0) {
-      this.missed.textContent = "Пропущено 0";
+      this.missed.textContent = 'Пропущено 0';
     } else {
       this.missed.textContent = `Пропущено ${this.scoreGoblin}`;
     }
-    
+
     if (this.scoreGoblin > 5) {
       this.lock = true;
     }
@@ -28,11 +28,11 @@ export default class GameState {
 
   refreshState() {
     if (this.scoreGoblin === -1) {
-      this.missed.textContent = "Пропущено 0";
+      this.missed.textContent = 'Пропущено 0';
     } else {
       this.missed.textContent = `Пропущено ${this.scoreGoblin}`;
     }
-    
+
     this.catch.textContent = `Поймал ${this.scoreUser}`;
   }
 
