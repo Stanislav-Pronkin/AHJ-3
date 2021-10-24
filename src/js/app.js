@@ -8,7 +8,7 @@ const move = new Move();
 
 class Game {
   constructor() {
-    this.board = document.querySelector('mainfield');
+    this.board = document.querySelector('.mainfield');
     this.cells = document.getElementsByClassName('field');
     this.character = document.createElement('img');
     this.listener = (event) => {
@@ -29,13 +29,13 @@ class Game {
         this.end();
       }
     }, 1000);
-    document.addEventListener('click', this.listener);
+    this.board.addEventListener('click', this.listener);
   }
 
   end() {
     alert('Вы проиграли, попробуйте еще раз');
     clearInterval(this.interval);
-    document.removeEventListener('click', this.listener);
+    this.board.removeEventListener('click', this.listener);
     state.clearState();
     this.init();
   }

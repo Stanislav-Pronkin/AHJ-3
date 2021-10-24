@@ -6,6 +6,8 @@ export default class Action {
     if (e.classList.contains('character')) {
       state.winUser();
       game.character.parentNode.removeChild(game.character);
+    } else {
+      state.winGoblin();
     }
   }
 }
